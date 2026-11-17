@@ -1,10 +1,11 @@
 /* Fasti for Mac — site styles.
    Tokens and type mirror the app's classical restyle (FastiPalette.swift, FastiType.swift).
-   Rules: one family (IBM Plex Mono), square corners, 1px ink rules, no shadows, no gradients. */
+   Rules: one family (IBM Plex Mono), square corners, 1px ink rules, no shadows, no gradients.
+   Fonts are IBM's own Latin1 WOFF2 subsets (@ibm/plex-mono 2.5.0, fonts/split/woff2), unmodified. */
 
-@font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-Medium-Latin1.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-SemiBold-Latin1.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 
 :root {
   color-scheme: light dark;
