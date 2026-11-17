@@ -191,7 +191,9 @@ figcaption { padding: 8px 12px; border-top: 1px solid var(--ink); color: var(--m
 }
 .panel-head span:last-child { color: var(--bar-muted); font-weight: 400; letter-spacing: 0.08em; text-transform: none; }
 .panel-body { display: flex; gap: 14px; padding: 14px; }
-.bust { flex: none; width: 112px; padding: 6px; background: #ebebe8; border: 1px solid var(--ink); }
+/* The pixel portrait, as in the app: exactly 3x, unsmoothed, standing on the box's bottom edge. */
+.bust { flex: none; display: flex; align-items: flex-end; justify-content: center; width: 112px; height: 124px; background: #ebebe8; border: 1px solid var(--ink); }
+.bust img { width: 96px; height: 96px; image-rendering: pixelated; }
 .panel-body blockquote { margin: 0; font-size: 13px; line-height: 1.6; }
 
 /* ---------- Keyboard: the shortcuts page ---------- */
