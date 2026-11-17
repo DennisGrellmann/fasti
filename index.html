@@ -56,7 +56,7 @@
             <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="assets/img/shots/board-dark-1280.avif 1280w, assets/img/shots/board-dark-2560.avif 2560w" sizes="(min-width: 1120px) 1056px, calc(100vw - 32px)">
             <source media="(prefers-color-scheme: dark)" srcset="assets/img/shots/board-dark-1280.png">
             <source type="image/avif" srcset="assets/img/shots/board-light-1280.avif 1280w, assets/img/shots/board-light-2560.avif 2560w" sizes="(min-width: 1120px) 1056px, calc(100vw - 32px)">
-            <img src="assets/img/shots/board-light-1280.png" width="1280" height="820"
+            <img src="assets/img/shots/board-light-1280.png" width="1280" height="820" fetchpriority="high"
                  alt="The Fasti window: a timeline of points such as Build prototype, 1 day, above To Do, In Progress and Done columns of cards. Build prototype is selected, so it is outlined on both the timeline and the board.">
           </picture>
           <figcaption>Timeline and board, with one point selected in both. Sample data.</figcaption>
@@ -153,13 +153,13 @@
         <table class="keys">
           <caption class="visually-hidden">Keyboard shortcuts</caption>
           <tbody>
-            <tr><th scope="row">New point</th><td><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>N</kbd></td></tr>
-            <tr><th scope="row">Edit the selected point</th><td><kbd>Return</kbd></td></tr>
-            <tr><th scope="row">Switch between timeline and board</th><td><kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd>Tab</kbd></td></tr>
-            <tr><th scope="row">Move between points and cards</th><td><kbd><span aria-hidden="true">←</span><span class="visually-hidden">Left arrow</span></kbd><kbd><span aria-hidden="true">→</span><span class="visually-hidden">Right arrow</span></kbd><kbd><span aria-hidden="true">↑</span><span class="visually-hidden">Up arrow</span></kbd><kbd><span aria-hidden="true">↓</span><span class="visually-hidden">Down arrow</span></kbd></td></tr>
-            <tr><th scope="row">Move a point back or forward a status</th><td><kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd><span aria-hidden="true">←</span><span class="visually-hidden">Left arrow</span></kbd> <span class="visually-hidden">or</span> <kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd><span aria-hidden="true">→</span><span class="visually-hidden">Right arrow</span></kbd></td></tr>
-            <tr><th scope="row">Go to now</th><td><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>0</kbd></td></tr>
-            <tr><th scope="row">Undo / redo</th><td><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>Z</kbd> <span class="visually-hidden">, and for redo</span> <kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>Z</kbd></td></tr>
+            <tr><th scope="row">New point</th><td><span class="chord"><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>N</kbd></span></td></tr>
+            <tr><th scope="row">Edit the selected point</th><td><span class="chord"><kbd>Return</kbd></span></td></tr>
+            <tr><th scope="row">Switch between timeline and board</th><td><span class="chord"><kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd>Tab</kbd></span></td></tr>
+            <tr><th scope="row">Move between points and cards</th><td><span class="chord"><kbd><span aria-hidden="true">←</span><span class="visually-hidden">Left arrow</span></kbd><kbd><span aria-hidden="true">→</span><span class="visually-hidden">Right arrow</span></kbd><kbd><span aria-hidden="true">↑</span><span class="visually-hidden">Up arrow</span></kbd><kbd><span aria-hidden="true">↓</span><span class="visually-hidden">Down arrow</span></kbd></span></td></tr>
+            <tr><th scope="row">Move a point back or forward a status</th><td><span class="chord"><kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd><span aria-hidden="true">←</span><span class="visually-hidden">Left arrow</span></kbd></span> <span class="visually-hidden">or</span> <span class="chord"><kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd><span aria-hidden="true">→</span><span class="visually-hidden">Right arrow</span></kbd></span></td></tr>
+            <tr><th scope="row">Go to now</th><td><span class="chord"><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>0</kbd></span></td></tr>
+            <tr><th scope="row">Undo / redo</th><td><span class="chord"><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>Z</kbd></span> <span class="visually-hidden">, and for redo</span> <span class="chord"><kbd><span aria-hidden="true">⇧</span><span class="visually-hidden">Shift</span></kbd><kbd><span aria-hidden="true">⌘</span><span class="visually-hidden">Command</span></kbd><kbd>Z</kbd></span></td></tr>
           </tbody>
         </table>
       </div>

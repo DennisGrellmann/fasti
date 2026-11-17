@@ -20,7 +20,7 @@ Match the app. If the site and the app disagree, the app wins.
 - **Colour:** monochrome tokens only (`--paper`, `--board`, `--card`, `--bar`, `--ink`, `--muted`, `--bar-muted`, `--hover`). Point colours (`--lavender` etc.) appear only as the 7px square on a card. Light and dark both follow `prefers-color-scheme`, with the app's dark values.
 - **Components** reuse the app's: toolbar-style top bar, `FastiButtonStyle` buttons (30px, ink border; only the primary action is ink-filled), board columns with a grey header bar and “quoted” uppercase names plus “(count)”, cards with a colour square, boxed `#TAG` chips, ink status markers (hollow / half / filled), Marcus's caption panel.
 - **No decoration without a job.** The app's brief deliberately dropped laurels, Latin mottos and ornament. The bust appears only with the tour. Don't add stock illustrations, icons for their own sake, or animation that doesn't explain something. Respect `prefers-reduced-motion` if you add any motion.
-- **Screenshots** are real app captures in a plain 1px ink frame with an uppercase caption, never mocked up or edited. Say “Sample data” when they show it.
+- **Screenshots** are real app captures in a plain 1px ink frame with an uppercase caption, never mocked up or edited (scaling, cropping and re-encoding are fine). Say “Sample data” when they show it. They live in `assets/img/shots/` as `<name>-<light|dark>-<1280|2560>.avif` plus a 1280 PNG fallback, served through `<picture>`; CSS masks the desktop showing behind the window's rounded corners. How they were captured is in `docs/handovers/2026-11-17-website-pass-1.md`.
 
 ## Writing
 
