@@ -10,7 +10,7 @@
   <meta property="og:title" content="Fasti for Mac">
   <meta property="og:description" content="See when work is due and where it stands. A timeline and a task board in one native Mac app.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/timeline-and-board.png">
+  <meta property="og:image" content="assets/img/shots/board-light-1280.png">
   <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/IBMPlexMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
@@ -43,9 +43,14 @@
           <span class="muted">No account. No server. Your points stay on your Mac.</span>
         </div>
         <figure class="shot">
-          <img src="assets/img/timeline-and-board.png" width="2560" height="1640"
-               alt="Fasti in light mode: a timeline of points above To Do, In Progress and Done columns of cards">
-          <figcaption>Timeline and board, light mode. Sample data.</figcaption>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="assets/img/shots/board-dark-1280.avif 1280w, assets/img/shots/board-dark-2560.avif 2560w" sizes="(min-width: 1120px) 1056px, calc(100vw - 32px)">
+            <source media="(prefers-color-scheme: dark)" srcset="assets/img/shots/board-dark-1280.png">
+            <source type="image/avif" srcset="assets/img/shots/board-light-1280.avif 1280w, assets/img/shots/board-light-2560.avif 2560w" sizes="(min-width: 1120px) 1056px, calc(100vw - 32px)">
+            <img src="assets/img/shots/board-light-1280.png" width="1280" height="820"
+                 alt="The Fasti window: a timeline of points such as Build prototype, 1 day, above To Do, In Progress and Done columns of cards. Build prototype is selected, so it is outlined on both the timeline and the board.">
+          </picture>
+          <figcaption>Timeline and board, with one point selected in both. Sample data.</figcaption>
         </figure>
       </div>
     </section>
@@ -92,8 +97,13 @@
           <p class="lede">When it’s time to work, collapse the timeline to an 80-point strip and give the board the room. The dates are still there, as days from now.</p>
         </div>
         <figure class="shot">
-          <img src="assets/img/compact-timeline.png" width="2560" height="1640" loading="lazy"
-               alt="Fasti with the timeline collapsed to a thin strip of day offsets above the board">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="assets/img/shots/compact-dark-1280.avif 1280w, assets/img/shots/compact-dark-2560.avif 2560w" sizes="(min-width: 1120px) 588px, (min-width: 900px) 55vw, calc(100vw - 32px)">
+            <source media="(prefers-color-scheme: dark)" srcset="assets/img/shots/compact-dark-1280.png">
+            <source type="image/avif" srcset="assets/img/shots/compact-light-1280.avif 1280w, assets/img/shots/compact-light-2560.avif 2560w" sizes="(min-width: 1120px) 588px, (min-width: 900px) 55vw, calc(100vw - 32px)">
+            <img src="assets/img/shots/compact-light-1280.png" width="1280" height="820" loading="lazy"
+                 alt="Fasti with the timeline collapsed to a thin strip of day offsets, from −4 to 21, above the To Do, In Progress and Done columns">
+          </picture>
           <figcaption>Compact timeline. Sample data.</figcaption>
         </figure>
       </div>
@@ -113,9 +123,14 @@
           </div>
         </div>
         <figure class="shot">
-          <img src="assets/img/tour-dark.png" width="2560" height="1640" loading="lazy"
-               alt="Fasti in dark mode with the tour running: Marcus Aurelius's caption panel sits in the bottom-right corner of the main window">
-          <figcaption>The tour, dark mode.</figcaption>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="assets/img/shots/tour-dark-1280.avif 1280w, assets/img/shots/tour-dark-2560.avif 2560w" sizes="(min-width: 1120px) 588px, (min-width: 900px) 55vw, calc(100vw - 32px)">
+            <source media="(prefers-color-scheme: dark)" srcset="assets/img/shots/tour-dark-1280.png">
+            <source type="image/avif" srcset="assets/img/shots/tour-light-1280.avif 1280w, assets/img/shots/tour-light-2560.avif 2560w" sizes="(min-width: 1120px) 588px, (min-width: 900px) 55vw, calc(100vw - 32px)">
+            <img src="assets/img/shots/tour-light-1280.png" width="1280" height="820" loading="lazy"
+                 alt="The tour running in the main window: the timeline is lit while the board is dimmed, and Marcus Aurelius's panel in the bottom-right corner reads “Every point tells you how far away it is.”">
+          </picture>
+          <figcaption>The tour, step III of VIII. Tour sample data.</figcaption>
         </figure>
       </div>
     </section>
