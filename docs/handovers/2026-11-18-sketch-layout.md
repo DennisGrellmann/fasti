@@ -17,3 +17,7 @@ Checked at 1280 and 390, light and dark, with Playwright: no sideways scroll at 
 - Marcus's quote cycles through all eight tour captions every 7 s, quoted exactly from `TourScript.swift` on the app repo's `feature/marcus-tour` branch. It pauses on hover and while the tab is hidden, and only fades when motion is allowed. Without JavaScript it shows the first line. The attribution line under the quote is gone.
 - The screenshot caption is gone, including “Sample data”. CLAUDE.md asks for that label, so bring it back if the owner changes their mind.
 - “View on GitHub” sits beside the download button and links to `DennisGrellmann/Fasti-Desktop-Mac`. Under it: “Open source, under the GPL-3.0 licence”, linking to the app's `LICENSE`. **That repo is private right now, so both links show visitors a 404 until it's made public.**
+
+## Marcus section removed
+
+At the owner's request, the Marcus portrait-and-quote section and its quote-cycling script are gone; the page has no JavaScript again. The hero still centres the pixel-art Marcus inside the turning ring of cards.

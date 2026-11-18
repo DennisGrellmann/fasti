@@ -57,16 +57,6 @@
       <p class="muted">Open source, under the <a href="https://github.com/DennisGrellmann/Fasti-Desktop-Mac/blob/main/LICENSE">GPL-3.0 licence</a>.</p>
     </section>
 
-    <figure class="marcus">
-      <picture>
-        <source type="image/webp" srcset="assets/img/marcus.webp">
-        <img src="assets/img/marcus.png" width="480" height="480" alt="Marcus Aurelius" loading="lazy">
-      </picture>
-      <figcaption>
-        <blockquote><p id="marcus-line">Welcome. I ran an empire on wax tablets. You get Fasti. Let me show you around.</p></blockquote>
-      </figcaption>
-    </figure>
-
     <figure class="shot">
       <picture>
         <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="assets/img/shots/board-dark-1280.avif 1280w, assets/img/shots/board-dark-2560.avif 2560w" sizes="(min-width: 1120px) 1056px, calc(100vw - 32px)">
@@ -77,33 +67,5 @@
       </picture>
     </figure>
   </main>
-  <script>
-    // Marcus's lines from the first-launch tour (TourScript.swift), shown in turn.
-    (function () {
-      var lines = [
-        "Welcome. I ran an empire on wax tablets. You get Fasti. Let me show you around.",
-        "This is the timeline. The arrow is now. Past on the left, future on the right. Very philosophical.",
-        "Every point tells you how far away it is. Two days. Not “soon.” Not “eventually.” Two days.",
-        "Below, the same work, by status. Drag it forward when you start. Moving a card is not the same as doing the task. But it is a start.",
-        "Pick one, and both views agree. Rare, in my experience of committees.",
-        "Time to work? Fold the timeline away. Stop looking at the road, and walk.",
-        "New point. A title, a date, a colour. I recommend Lavender. Close enough to imperial.",
-        "Now. Do the next right thing. I’ll be here. Well. The statue will."
-      ];
-      var el = document.getElementById("marcus-line");
-      if (!el) return;
-      var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      var i = 0, paused = false;
-      el.closest("figure").addEventListener("mouseenter", function () { paused = true; });
-      el.closest("figure").addEventListener("mouseleave", function () { paused = false; });
-      setInterval(function () {
-        if (paused || document.hidden) return;
-        i = (i + 1) % lines.length;
-        if (still) { el.textContent = lines[i]; return; }
-        el.classList.add("out");
-        setTimeout(function () { el.textContent = lines[i]; el.classList.remove("out"); }, 400);
-      }, 7000);
-    })();
-  </script>
 </body>
 </html>
