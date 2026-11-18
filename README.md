@@ -28,7 +28,7 @@ swift scripts/snapshot.swift http://127.0.0.1:8765/ 390 phone.png dark
 | `index.html` | The page |
 | `assets/css/site.css` | All styles. Tokens at the top mirror the app's palette |
 | `assets/fonts/` | IBM Plex Mono 400/500/600 as IBM's Latin1 WOFF2 subsets, and its licence (OFL) |
-| `assets/img/` | App screenshots (`shots/`: AVIF at 1280 and 2560, PNG fallback), the share image, the Marcus Aurelius bust, icons |
+| `assets/img/` | App screenshots (`shots/`: AVIF at 1280 and 2560, PNG fallback), the share image, Marcus Aurelius (`marcus.png`/`.webp`), icons |
 | `scripts/snapshot.swift` | WebKit page renderer for checking layouts |
 | `scripts/og-image.html` | Source for the 1200 × 630 share image; how to rebuild it is in the file |
 | `docs/handovers/` | Handover notes between work sessions |
