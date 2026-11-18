@@ -112,3 +112,9 @@ a.button.prominent[href]:hover { background: var(--muted); border-color: var(--m
 .button[aria-disabled="true"] { cursor: default; }
 .button.large { height: 44px; padding: 0 22px; font-size: 13px; }
 
+/* ---------- Screenshot in a plain 1px ink frame, square, no shadow ---------- */
+
+.shot { margin: 56px 0 0; border: 1px solid var(--ink); background: var(--board); }
+.shot img { width: 100%; }
+/* Captures include the desktop behind the window's rounded corners; mask to the window's own corner. */
+.shot picture img { border-radius: 2.82% / 4.4%; }

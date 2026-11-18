@@ -25,7 +25,3 @@ At the owner's request, the Marcus portrait-and-quote section and its quote-cycl
 ## Tab icon
 
 `favicon-64.png` and `apple-touch-icon.png` (256 px) are now the pixel-art Marcus, cropped to his head so it reads at tab size. The links carry `?v=2` to get past cached icons. `icon-1024.png` is still the app's engraved icon (unused by the page).
-
-## Screenshot removed
-
-At the owner's request, the board screenshot at the foot of the page is gone, with its `.shot` styles. The captures stay in `assets/img/shots/` in case it comes back. The page now ends with the download section.
