@@ -29,7 +29,8 @@
     <header class="hero">
       <h1>Fasti</h1>
       <p class="tagline">Your to-do on a timeline.</p>
-      <div class="burst" aria-hidden="true">
+      <div class="burst">
+        <div class="ring" aria-hidden="true">
           <span class="mini" style="--a: 0deg; --t: -8deg; --c: var(--lavender)"></span>
           <span class="mini" style="--a: 40deg; --t: 12deg; --c: var(--mint)"></span>
           <span class="mini" style="--a: 80deg; --t: -14deg; --c: var(--peach)"></span>
@@ -39,23 +40,30 @@
           <span class="mini" style="--a: 240deg; --t: -6deg; --c: var(--mint)"></span>
           <span class="mini" style="--a: 282deg; --t: 10deg; --c: var(--blue)"></span>
           <span class="mini" style="--a: 322deg; --t: -12deg; --c: var(--peach)"></span>
-        <img class="icon" src="assets/img/icon-288.png" width="288" height="288" alt="">
+        </div>
+        <picture>
+          <source type="image/webp" srcset="assets/img/marcus.webp">
+          <img class="icon" src="assets/img/marcus.png" width="480" height="480" alt="Pixel-art portrait of Marcus Aurelius in a purple cloak, with ruined temples behind him.">
+        </picture>
       </div>
     </header>
 
     <section class="get" aria-label="Download">
-      <a class="button prominent large" role="link" aria-disabled="true">Download for macOS</a>
+      <div class="buttons">
+        <a class="button prominent large" role="link" aria-disabled="true">Download for macOS</a>
+        <a class="button large" href="https://github.com/DennisGrellmann/Fasti-Desktop-Mac">View on GitHub</a>
+      </div>
       <p class="muted">macOS 14 or later. Not available yet.</p>
+      <p class="muted">Open source, under the <a href="https://github.com/DennisGrellmann/Fasti-Desktop-Mac/blob/main/LICENSE">GPL-3.0 licence</a>.</p>
     </section>
 
     <figure class="marcus">
       <picture>
         <source type="image/webp" srcset="assets/img/marcus.webp">
-        <img src="assets/img/marcus.png" width="480" height="480" alt="Pixel-art portrait of Marcus Aurelius in a purple cloak, with ruined temples behind him.">
+        <img src="assets/img/marcus.png" width="480" height="480" alt="Marcus Aurelius" loading="lazy">
       </picture>
       <figcaption>
-        <blockquote><p>Now. Do the next right thing. I’ll be here. Well. The statue will.</p></blockquote>
-        <p class="who">Marcus Aurelius, your guide on the first-launch tour</p>
+        <blockquote><p id="marcus-line">Welcome. I ran an empire on wax tablets. You get Fasti. Let me show you around.</p></blockquote>
       </figcaption>
     </figure>
 
@@ -67,8 +75,35 @@
         <img src="assets/img/shots/board-light-1280.png" width="1280" height="820" loading="lazy"
              alt="The Fasti window: a timeline of tasks above To Do, In Progress and Done columns of cards.">
       </picture>
-      <figcaption>A timeline above a task board. Sample data.</figcaption>
     </figure>
   </main>
+  <script>
+    // Marcus's lines from the first-launch tour (TourScript.swift), shown in turn.
+    (function () {
+      var lines = [
+        "Welcome. I ran an empire on wax tablets. You get Fasti. Let me show you around.",
+        "This is the timeline. The arrow is now. Past on the left, future on the right. Very philosophical.",
+        "Every point tells you how far away it is. Two days. Not “soon.” Not “eventually.” Two days.",
+        "Below, the same work, by status. Drag it forward when you start. Moving a card is not the same as doing the task. But it is a start.",
+        "Pick one, and both views agree. Rare, in my experience of committees.",
+        "Time to work? Fold the timeline away. Stop looking at the road, and walk.",
+        "New point. A title, a date, a colour. I recommend Lavender. Close enough to imperial.",
+        "Now. Do the next right thing. I’ll be here. Well. The statue will."
+      ];
+      var el = document.getElementById("marcus-line");
+      if (!el) return;
+      var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var i = 0, paused = false;
+      el.closest("figure").addEventListener("mouseenter", function () { paused = true; });
+      el.closest("figure").addEventListener("mouseleave", function () { paused = false; });
+      setInterval(function () {
+        if (paused || document.hidden) return;
+        i = (i + 1) % lines.length;
+        if (still) { el.textContent = lines[i]; return; }
+        el.classList.add("out");
+        setTimeout(function () { el.textContent = lines[i]; el.classList.remove("out"); }, 400);
+      }, 7000);
+    })();
+  </script>
 </body>
 </html>
