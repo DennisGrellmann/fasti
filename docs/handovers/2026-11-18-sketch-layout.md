@@ -21,3 +21,7 @@ Checked at 1280 and 390, light and dark, with Playwright: no sideways scroll at 
 ## Marcus section removed
 
 At the owner's request, the Marcus portrait-and-quote section and its quote-cycling script are gone; the page has no JavaScript again. The hero still centres the pixel-art Marcus inside the turning ring of cards.
+
+## Tab icon
+
+`favicon-64.png` and `apple-touch-icon.png` (256 px) are now the pixel-art Marcus, cropped to his head so it reads at tab size. The links carry `?v=2` to get past cached icons. `icon-1024.png` is still the app's engraved icon (unused by the page).
